@@ -43,6 +43,4 @@ class Solution(object):
                 pass
             elif letters[i] == letters[i - 1]:
                 output += 1
-        if output == len(letters) + 1:
-            output -= 1
         return output
