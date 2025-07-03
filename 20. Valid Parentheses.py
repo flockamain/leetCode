@@ -45,10 +45,10 @@ class Solution(object):
                 if not d:
                     return False
                     break
-                top = d.pop()
-                if (h == ")" and top != "(") or \
-                (h == "]" and top != "[") or \
-                (h == "}" and top != "{"):
+                t = d.pop()
+                if (h == ")" and t != "(") or \
+                (h == "]" and t != "[") or \
+                (h == "}" and t != "{"):
                     return False
                     break
         if not d:
