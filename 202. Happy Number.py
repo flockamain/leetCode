@@ -26,18 +26,18 @@ Output: false"""
 class Solution(object):
     def isHappy(self, n):
         s = []
-        total = 0
-        checker = []
+        t = 0
+        c = []
 
         while n != 1:
-            total = 0
+            t = 0
             s = list(map(int, str(n)))
             for i in s:
-                total += i * i
-            n = total
-            if total in checker:
+                t += i * i
+            n = t
+            if t in c:
                 return False
                 break
-            checker.append(total)
+            c.append(t)
 
         return True
