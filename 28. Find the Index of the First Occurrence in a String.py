@@ -23,10 +23,6 @@ class Solution(object):
             while i + len(n) <= len(h):
                 if h[i:i + len(n)] == n:
                     return(i)
-                    break
                 i += 1
-            else:
-                continue
-            break
         else:
             return(-1)
