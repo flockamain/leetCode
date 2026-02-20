@@ -1,6 +1,6 @@
 """Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.
 
-Consider the number of unique elements in nums to be k​​​​​​​​​​​​​​. After removing duplicates, return the number of unique elements k.
+Consider the number of unique elements in nums to be k. After removing duplicates, return the number of unique elements k.
 
 The first k elements of nums should contain the unique numbers in sorted order. The remaining elements beyond index k - 1 can be ignored.
 
@@ -20,13 +20,12 @@ for (int i = 0; i < k; i++) {
 If all assertions pass, then your solution will be accepted.
 
 """
-class Solution:
-    def removeDuplicates(self, nums: List[int]) -> int:
-        i = 0    
-        while i < len(nums) - 1:
-            if nums[i] == nums[i + 1]:
+class Solution(object):
+    def removeDuplicates(nums, k):
+        i = 0
+        for i in range(len(nums)):
+            if i + 1 < len(nums) and nums[i] == nums[i + 1]:
                 nums.pop(i)
-            else:
-                i += 1
+                i -= 1
         k = len(nums)
         return k
