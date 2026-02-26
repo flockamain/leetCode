@@ -18,12 +18,13 @@ Input: prices = [7,6,4,3,1]
 Output: 0
 Explanation: In this case, no transactions are done and the max profit = 0."""
 
-def maxProfit(self, prices):
-    low = 100001
-    max_profit = 0
-    for i in prices:
-        if i < low:
-            low = i
-        elif i - low > max_profit:
-            max_profit = i - low
-    return max_profit     
+class Solution(object):
+    def maxProfit(self, prices):
+        l = float('inf')
+        m = 0
+        for i in prices:
+            if i < l:
+                l = i
+            elif i - l > m:
+                m = i - l
+        return m   
