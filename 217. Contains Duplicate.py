@@ -40,3 +40,11 @@ def containsDuplicate(self, nums):
         else:
             unique.add(num)
     return False
+
+#later looked at others' answers and found that there's an easier way to implement this - you can define the set
+#within an if statement
+#if len(nums) == len(set(nums)):
+#            return False
+#        return True
+
+#runtime is much better this way - 7ms
