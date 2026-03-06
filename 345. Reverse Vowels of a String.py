@@ -22,13 +22,14 @@ Output: "leotcede"
 """
 def reverseVowels(self, s):
     vowels = 'aeiouAEIOU'
-    s = list(s)
-    swap = []
-    for i in range(len(s)):
-        if s[i] in vowels:
-            swap.append(s[i])
-    swap.reverse()
-    for i in range(len(s)):
-        if s[i] in vowels:
-            s[i] = swap.pop(0)
-    return ''.join(s)
+    temp = []
+    for i in s:
+        if i in vowels:
+            temp.append(i)
+    final = ''
+    for i in s:
+        if i in vowels:
+            final += temp.pop()
+        else:
+            final += i
+    return final
