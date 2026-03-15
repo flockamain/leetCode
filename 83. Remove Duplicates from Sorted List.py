@@ -8,7 +8,19 @@ Example 2:
 
 
 Input: head = [1,1,2,3,3]
-Output: [1,2,3]"""
+Output: [1,2,3]
+
+
+Finally figured out linked lists in python!!! I got the general idea, but leetcode makes linked list problems in python really hard because it
+gives the inputs as lists instead of creating the linked lists.
+
+Need something like curr that copies the original point in memory to reference and output the entire linked list.
+
+setting .next to .next.next essentially removes the link to the next value/point in memory. I believe this creates memory leaks though because
+the original .next is still in memory, no? Need to do more research on that.
+
+Runtime - 30ms: Beats 8.23%
+Memory - 12.47mb: Beats 51.33%"""
 
 # Definition for singly-linked list.
 # class ListNode(object):
