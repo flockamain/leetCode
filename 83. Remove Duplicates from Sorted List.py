@@ -19,8 +19,7 @@ Need something like curr that copies the original point in memory to reference a
 setting .next to .next.next essentially removes the link to the next value/point in memory. I believe this creates memory leaks though because
 the original .next is still in memory, no? Need to do more research on that.
 
-Runtime - 30ms: Beats 8.23%
-Memory - 12.47mb: Beats 51.33%"""
+Removed print statement for better runtime and memory"""
 
 # Definition for singly-linked list.
 # class ListNode(object):
@@ -36,7 +35,6 @@ class Solution(object):
             return head
         #get to the second to last element in the linked list
         while head.next.next is not None:
-            print(head.val)
             if head.val == head.next.val:
                 head.next = head.next.next
             else:
