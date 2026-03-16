@@ -24,7 +24,6 @@ class Solution(object):
             return head
         #get to the second to last element in the linked list
         while head.next.next is not None:
-            print(head.val)
             if head.val == head.next.val:
                 head.next = head.next.next
             else:
