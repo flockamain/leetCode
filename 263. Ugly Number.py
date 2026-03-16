@@ -38,3 +38,4 @@ def isUgly(self, n):
         return True
     else:
         return False
+    
